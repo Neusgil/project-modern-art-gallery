@@ -6,7 +6,7 @@ The project follows a mobile-first approach and includes dedicated layouts for m
 
 ## Live Website
 
-🌐 **[View Modern Art Gallery](GITHUB-PAGES-URL)**
+🌐 **[View Modern Art Gallery](https://neusgil.github.io/project-modern-art-gallery/)**
 
 Explore the live website to test the responsive layouts, navigation between pages and interactive hover states.
 
@@ -135,4 +135,3 @@ The layouts were individually adapted and tested for mobile, tablet and desktop 
 **Neus Gil**
 
 Frontend development practice project.
-  
