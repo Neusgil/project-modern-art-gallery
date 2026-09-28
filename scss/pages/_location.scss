@@ -1,0 +1,497 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ==============================
+// LOCATION
+// Mobile First
+// ==============================
+
+.location-map {
+  position: relative;
+
+  width: 100%;
+  height: 550px;
+
+  &__image {
+    display: block;
+
+    width: 100%;
+    height: 550px;
+
+    object-fit: cover;
+  }
+
+  .button--back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+  }
+}
+
+// ==============================
+// LOCATION INFO
+// Mobile First
+// ==============================
+
+.location-info {
+  width: 100%;
+  height: 493px;
+
+  padding: 48px 16px 0;
+
+  background-color: $color-black;
+  color: $color-white;
+
+  &__title {
+    width: 343px;
+    height: 45px;
+    margin: 0;
+
+    font-family: $font-heading;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 45px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    color: $color-white;
+  }
+
+  &__content {
+    width: 343px;
+    height: 296px;
+
+    margin-top: 48px;
+  }
+
+  &__subtitle {
+    width: 343px;
+    height: 32px;
+    margin: 0;
+
+    font-family: $font-heading;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 32px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    color: $color-gold;
+  }
+
+  &__address {
+    width: 343px;
+    height: 84px;
+
+    margin: 20px 0 0;
+
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+
+    color: $color-white;
+  }
+
+  &__description {
+    width: 343px;
+    height: 140px;
+
+    margin: 20px 0 0;
+
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    letter-spacing: 0;
+
+    color: $color-white;
+  }
+}
+
+// ==============================
+// FOOTER - LOCATION
+// Mobile First
+// ==============================
+
+.footer--location {
+  height: 336px;
+  margin-top: 0;
+  padding: 48px 32px;
+
+  background-color: $color-gold;
+
+  .footer__logo {
+    width: 110.05px;
+    height: 40px;
+  }
+
+  .footer__text {
+    width: 311px;
+    height: 104px;
+    margin-top: 38px;
+
+    font-size: 16px;
+    line-height: 26px;
+
+    color: $color-black;
+  }
+
+  .footer__social {
+    width: 100px;
+    height: 20px;
+    margin-top: 38px;
+  }
+
+  .footer__social img {
+    filter: brightness(0);
+  }
+}
+
+// ==============================
+// TABLET
+// ==============================
+
+@include tablet {
+  // MAPA
+
+  .location-map {
+    width: 100%;
+    height: 600px;
+
+    &__image {
+      width: 100%;
+      height: 600px;
+
+      object-fit: cover;
+    }
+
+    .button--back {
+      top: 0;
+      left: 39px;
+    }
+  }
+
+  // ==============================
+  // LOCATION INFO
+  // ==============================
+
+  .location-info {
+    width: 100%;
+    height: 436px;
+
+    padding: 88px 39px 0;
+
+    background-color: $color-black;
+    color: $color-white;
+
+    display: grid;
+    grid-template-columns: 223px 29px 398px;
+
+    &__title {
+      width: 223px;
+      height: 100px;
+      margin: 0;
+
+      grid-column: 1;
+
+      font-family: $font-heading;
+      font-size: 55px;
+      font-weight: 900;
+      line-height: 50px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+
+      color: $color-white;
+    }
+
+    &__content {
+      width: 398px;
+      height: 268px;
+      margin: 0;
+
+      grid-column: 3;
+    }
+
+    &__subtitle {
+      width: 350px;
+      height: 32px;
+      margin: 0;
+
+      font-family: $font-heading;
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 32px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+
+      color: $color-gold;
+    }
+
+    &__address {
+      width: 398px;
+      height: 84px;
+
+      margin: 20px 0 0;
+
+      font-family: $font-body;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+
+      color: $color-white;
+    }
+
+    &__description {
+      width: 398px;
+      height: 112px;
+
+      margin: 20px 0 0;
+
+      font-family: $font-body;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      letter-spacing: 0;
+
+      color: $color-white;
+    }
+  }
+
+  // ==============================
+  // FOOTER LOCATION - TABLET
+  // ==============================
+
+  .footer--location {
+    width: 100%;
+    height: 216px;
+    margin-top: 0;
+    padding: 56px 39px;
+
+    background-color: $color-gold;
+    color: $color-black;
+
+    display: grid;
+    grid-template-columns: 110px 65px 281px 133px 100px;
+    align-items: start;
+
+    .footer__logo {
+      width: 110.05px;
+      height: 40px;
+
+      grid-column: 1;
+    }
+
+    .footer__text {
+      width: 281px;
+      height: 104px;
+      margin: 0;
+
+      grid-column: 3;
+
+      font-size: 16px;
+      line-height: 26px;
+
+      color: $color-black;
+    }
+
+    .footer__social {
+      width: 100px;
+      height: 20px;
+      margin: 0;
+
+      grid-column: 5;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    .footer__social img {
+      display: block;
+      filter: brightness(0);
+    }
+  }
+}
+
+// ==============================
+// DESKTOP
+// ==============================
+
+@include desktop {
+  // MAPA
+
+  .location-map {
+    width: 100%;
+    height: 600px;
+
+    &__image {
+      width: 100%;
+      height: 600px;
+
+      object-fit: cover;
+    }
+
+    .button--back {
+      top: 0;
+      left: 156px;
+    }
+  }
+
+  // ==============================
+  // LOCATION INFO - DESKTOP
+  // ==============================
+
+  .location-info {
+    width: 100%;
+    height: 548px;
+
+    padding: 104px 165px 0;
+
+    background-color: $color-black;
+    color: $color-white;
+
+    display: grid;
+    grid-template-columns: 350px 220px 540px;
+    align-items: start;
+
+    &__title {
+      width: 350px;
+      height: 140px;
+      margin: 0;
+
+      grid-column: 1;
+
+      font-family: $font-heading;
+      font-size: 70px;
+      font-weight: 900;
+      line-height: 70px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+
+      color: $color-white;
+    }
+
+    &__content {
+      width: 540px;
+      height: 316px;
+      margin: 0;
+
+      grid-column: 3;
+    }
+
+    &__subtitle {
+      width: 350px;
+      height: 36px;
+      margin: 0;
+
+      font-family: $font-heading;
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 36px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+
+      color: $color-gold;
+    }
+
+    &__address {
+      width: 445px;
+      height: 96px;
+
+      margin: 24px 0 0;
+
+      font-family: $font-body;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0;
+
+      color: $color-white;
+    }
+
+    &__description {
+      width: 540px;
+      height: 128px;
+
+      margin: 32px 0 0;
+
+      font-family: $font-body;
+      font-size: 22px;
+      font-weight: 400;
+      line-height: 32px;
+      letter-spacing: 0;
+
+      color: $color-white;
+    }
+  }
+
+  // ==============================
+  // FOOTER LOCATION - DESKTOP
+  // ==============================
+
+  .footer--location {
+    width: 100%;
+    height: 244px;
+    margin-top: 0;
+    padding: 80px 165px;
+
+    background-color: $color-gold;
+    color: $color-black;
+
+    display: grid;
+    grid-template-columns:
+      159.57px
+      140.43px
+      430px
+      280px
+      100px;
+
+    align-items: start;
+
+    .footer__logo {
+      width: 159.57px;
+      height: 58px;
+      margin: 0;
+
+      grid-column: 1;
+    }
+
+    .footer__text {
+      width: 430px;
+      height: 84px;
+      margin: 0;
+
+      grid-column: 3;
+
+      font-family: $font-body;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+
+      color: $color-black;
+    }
+
+    .footer__social {
+      width: 100px;
+      height: 20px;
+      margin: 0;
+
+      grid-column: 5;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 0;
+    }
+
+    .footer__social img {
+      display: block;
+      filter: brightness(0);
+    }
+  }
+}

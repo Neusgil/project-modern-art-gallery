@@ -1,0 +1,184 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+// ==============================
+// HERO
+// Mobile First
+// ==============================
+
+.hero {
+  width: 100%;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+  }
+
+  &__content {
+    padding: 32px 16px 0;
+  }
+
+  &__title {
+    margin: 0;
+
+    font-family: $font-heading;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 55px;
+    text-transform: uppercase;
+
+    color: $color-black;
+  }
+
+  &__description {
+    margin: 32px 0 0;
+
+    font-family: $font-body;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+
+    color: $color-dark-gray;
+  }
+
+  .button {
+    margin-top: 32px;
+  }
+}
+
+// ==============================
+// TABLET
+// ==============================
+
+@include tablet {
+  .hero {
+    position: relative;
+    height: 700px;
+
+    &__image {
+      width: 437px;
+      height: 700px;
+
+      object-fit: cover;
+      content: url("/images/people-in-tablet.jpg");
+    }
+
+    &__content {
+      position: absolute;
+      top: 145px;
+      left: 389px;
+
+      width: 339px;
+      padding: 0;
+    }
+
+    &__title {
+      font-size: 70px;
+      line-height: 65px;
+    }
+
+    &__description {
+      margin-top: 48px;
+    }
+
+    .button {
+      margin-top: 48px;
+    }
+  }
+}
+
+// ==============================
+// DESKTOP
+// ==============================
+
+@include desktop {
+  .hero {
+    position: relative;
+
+    width: 1275px;
+    height: 800px;
+
+    // Bloque negro de la izquierda
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 450px;
+      height: 800px;
+
+      background-color: $color-black;
+
+      z-index: 0;
+    }
+
+    &__image {
+      position: absolute;
+      top: 0;
+      left: 450px;
+
+      width: 540px;
+      height: 800px;
+
+      object-fit: cover;
+      content: url("/images/people-in-tablet.jpg");
+
+      z-index: 1;
+    }
+
+    &__content {
+      position: static;
+
+      width: auto;
+      padding: 0;
+    }
+
+    &__title {
+      position: absolute;
+      top: 189px;
+      left: 165px;
+
+      width: 514px;
+      height: 176px;
+
+      margin: 0;
+
+      font-size: 96px;
+      line-height: 88px;
+
+      color: $color-white;
+
+      z-index: 2;
+    }
+
+    &__description {
+      position: absolute;
+      top: 190px;
+      left: 925px;
+
+      width: 350px;
+      height: 160px;
+
+      margin: 0;
+
+      font-size: 22px;
+      line-height: 32px;
+
+      z-index: 2;
+    }
+
+    .button {
+      position: absolute;
+      top: 414px;
+      left: 925px;
+
+      margin: 0;
+
+      z-index: 2;
+    }
+  }
+}

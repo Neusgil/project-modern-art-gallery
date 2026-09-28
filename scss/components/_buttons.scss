@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+
+// ==============================
+// BUTTON
+// Mobile First
+// ==============================
+
+.button {
+  display: inline-flex;
+  height: 72px;
+  margin: 0;
+  text-decoration: none;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 204px;
+    height: 72px;
+
+    background-color: $color-black;
+    color: $color-white;
+
+    font-family: $font-heading;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: 3.64px;
+    text-transform: uppercase;
+
+    transition: background-color 0.3s ease;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 56px;
+    height: 72px;
+
+    background-color: $color-gold;
+
+    transition: background-color 0.3s ease;
+
+    img {
+      display: block;
+    }
+  }
+
+  &:hover {
+    .button__text {
+      background-color: $color-gold;
+    }
+
+    .button__icon {
+      background-color: $color-black;
+    }
+  }
+}
+
+// ==============================
+// BUTTON - BACK TO HOME
+// ==============================
+
+.button--back {
+  .button__text {
+    width: 208px;
+  }
+}

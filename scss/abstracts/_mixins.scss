@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+// ==============================
+// RESPONSIVE - MOBILE FIRST
+// ==============================
+
+// Tablet: 768px en adelante
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+// Desktop: 1200px en adelante
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
